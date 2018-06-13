@@ -78,8 +78,8 @@ def recompute_centroids(X, Y):
     return sums / counts
 
 
-with tf.Session() as sess:
-    sess.run(tf.initialize_all_variables())
+with tf.Session() as sess:    
+    sess.run(tf.global_variables_initializer())
     X, names = get_dataset(sess)
     centroids = initial_cluster_centroids(X, k)
     i, converged = 0, False

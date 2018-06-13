@@ -57,7 +57,7 @@ def extract_feature_vector(sess, chromo_data):
 
 
 with tf.Session() as sess:
-    X = get_dataset(sess, 'sysk.wav')
+    X = get_dataset(sess, 'TalkingMachinesPodcast.wav')
     print(np.shape(X))
     centroids = initial_cluster_centroids(X, k)
     i, converged = 0, False
